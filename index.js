@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const button = document.getElementById('button');
 const greetings = document.getElementById('greetings');
 const audioPlay = document.getElementById('speakerIcon');
+const instructions = document.getElementById('Instructions');
 
 document.body.appendChild(canvas);
 canvas.width = window.innerWidth;
@@ -83,11 +84,13 @@ function fadeIn(){
         opacity = opacity + 0.25;
         greetings.style.opacity = opacity;
         audioPlay.style.opacity = opacity;
+        instructions.style.opacity = opacity;
     }
     else if(opacity == 1 && opacity ){
         opacity = opacity - 0.25;
         greetings.style.opacity = opacity;
         audioPlay.style.opacity = opacity;
+        instructions.style.opacity = opacity;
     }
     else{
         clearInterval(interval);
