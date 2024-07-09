@@ -13,29 +13,29 @@
 // window.addEventListener("resize", () => [canvas.width, canvas.height] = [window.innerWidth, window.innerHeight], false);
 
 //DHARRWEEN VILLASANA
-// class Firework {
-//     constructor() {
-//         this.x = Math.random() * canvas.width;
-//         this.y = canvas.height;
-//         this.sx = Math.random() * 3 - 1.5;
-//         this.sy = Math.random() * -3 - 1.5;
-//         this.size = Math.random() * 1 + 1;
-//         const colorVal = Math.round(0xffffff * Math.random());
-//         [this.r, this.g, this.b] = [colorVal >> 16, (colorVal >> 8) & 255, colorVal & 255];
-//         this.shouldExplode = false;
-//     }
-//     update() {
-//         this.shouldExplode = this.sy >= -2 || this.y <= 100 || this.x <= 0 || this.x >= canvas.width;
-//         this.sy += 0.01;
-//         [this.x, this.y] = [this.x + this.sx, this.y + this.sy];
-//     }
-//     draw() {
-//         ctx.fillStyle = `rgb(${this.r},${this.g},${this.b})`;
-//         ctx.beginPath();
-//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-//         ctx.fill();
-//     }
-// }
+class Firework {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height;
+        this.sx = Math.random() * 3 - 1.5;
+        this.sy = Math.random() * -3 - 1.5;
+        this.size = Math.random() * 1 + 1;
+        const colorVal = Math.round(0xffffff * Math.random());
+        [this.r, this.g, this.b] = [colorVal >> 16, (colorVal >> 8) & 255, colorVal & 255];
+        this.shouldExplode = false;
+    }
+    update() {
+        this.shouldExplode = this.sy >= -2 || this.y <= 100 || this.x <= 0 || this.x >= canvas.width;
+        this.sy += 0.01;
+        [this.x, this.y] = [this.x + this.sx, this.y + this.sy];
+    }
+    draw() {
+        ctx.fillStyle = `rgb(${this.r},${this.g},${this.b})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
 
 class Particle {
     constructor(x, y, r, g, b) {
