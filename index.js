@@ -55,28 +55,28 @@ class Particle {
 }
 
 // CIRILO IGNACIO GERONIO
-// const fireworks = [new Firework()];
-// const particles = [];
+const fireworks = [new Firework()];
+const particles = [];
 
-// function animate() {
-//     ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
-//     ctx.fillRect(0, 0, canvas.width, canvas.height);
-//     Math.random() < 0.25 && fireworks.push(new Firework());  //Controlling the number of fireworks
-//     fireworks.forEach((firework, i) => {
-//         firework.update();
-//         firework.draw();
-//         if (firework.shouldExplode) {
-//             for (let j = 0; j < 50; j++) particles.push(new Particle(firework.x, firework.y, firework.r, firework.g, firework.b));
-//             fireworks.splice(i, 1);
-//         }
-//     });
-//     particles.forEach((particle, i) => {
-//         particle.update();
-//         particle.draw();
-//         if (particle.life <= 0) particles.splice(i, 1);
-//     });
-//     requestAnimationFrame(animate);
-// }
+function animate() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    Math.random() < 0.25 && fireworks.push(new Firework());  //Controlling the number of fireworks
+    fireworks.forEach((firework, i) => {
+        firework.update();
+        firework.draw();
+        if (firework.shouldExplode) {
+            for (let j = 0; j < 50; j++) particles.push(new Particle(firework.x, firework.y, firework.r, firework.g, firework.b));
+            fireworks.splice(i, 1);
+        }
+    });
+    particles.forEach((particle, i) => {
+        particle.update();
+        particle.draw();
+        if (particle.life <= 0) particles.splice(i, 1);
+    });
+    requestAnimationFrame(animate);
+}
 
 MIKE JASPER LINGASIN
 const interval = 0;
