@@ -78,47 +78,47 @@ class Particle {
 //     requestAnimationFrame(animate);
 // }
 
-//MIKE JASPER LINGASIN
-// const interval = 0;
-// function settingInterval(){
-//     interval = setInterval(fadeIn, 400);
-// }
-// function fadeIn(){
-//     opacity = Number(window.getComputedStyle(greetings).getPropertyValue("opacity"));
-//     if(opacity < 1){
-//         opacity = opacity + 0.25;
-//         greetings.style.opacity = opacity;
-//         audioPlay.style.opacity = opacity;
-//         instructions.style.opacity = opacity;
-//     }
-//     else if(opacity == 1 && opacity ){
-//         opacity = opacity - 0.25;
-//         greetings.style.opacity = opacity;
-//         audioPlay.style.opacity = opacity;
-//         instructions.style.opacity = opacity;
-//     }
-//     else{
-//         clearInterval(interval);
-//     }
-// }
+MIKE JASPER LINGASIN
+const interval = 0;
+function settingInterval(){
+    interval = setInterval(fadeIn, 400);
+}
+function fadeIn(){
+    opacity = Number(window.getComputedStyle(greetings).getPropertyValue("opacity"));
+    if(opacity < 1){
+        opacity = opacity + 0.25;
+        greetings.style.opacity = opacity;
+        audioPlay.style.opacity = opacity;
+        instructions.style.opacity = opacity;
+    }
+    else if(opacity == 1 && opacity ){
+        opacity = opacity - 0.25;
+        greetings.style.opacity = opacity;
+        audioPlay.style.opacity = opacity;
+        instructions.style.opacity = opacity;
+    }
+    else{
+        clearInterval(interval);
+    }
+}
 
-// button.addEventListener('click', (e) => {
-//     button.style.opacity = 0;
-//     animate();
-// })
-// const music1 = new Audio('lv_0_20231231193252.mp3')
-// const music2 = new Audio('lv_0_20231231194123.mp3')
+button.addEventListener('click', (e) => {
+    button.style.opacity = 0;
+    animate();
+})
+const music1 = new Audio('lv_0_20231231193252.mp3')
+const music2 = new Audio('lv_0_20231231194123.mp3')
 
-// let musicChance1 = Math.random() * 0.4;
-// let musicChance2 = Math.random() * 0.6;
-// audioPlay.addEventListener('click', (p) => {
-//    if(musicChance1 == musicChance2){
-//     music1.play();
-//    }
-//    else if(musicChance1 > musicChance2){
-//     music1.play();
-//    }
-//    else{
-//     music2.play();
-//    }
-// })
+let musicChance1 = Math.random() * 0.4;
+let musicChance2 = Math.random() * 0.6;
+audioPlay.addEventListener('click', (p) => {
+   if(musicChance1 == musicChance2){
+    music1.play();
+   }
+   else if(musicChance1 > musicChance2){
+    music1.play();
+   }
+   else{
+    music2.play();
+   }
+})
