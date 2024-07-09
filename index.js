@@ -1,16 +1,16 @@
-// YUAN GABRIEL VINEGAS
 
-// const canvas = document.createElement("canvas");
-// const ctx = canvas.getContext("2d");
-// const button = document.getElementById('button');
-// const greetings = document.getElementById('greetings');
-// const audioPlay = document.getElementById('speakerIcon');
-// const instructions = document.getElementById('Instructions');
 
-// document.body.appendChild(canvas);
-// canvas.width = window.innerWidth;
-// canvas.height = window.innerHeight;
-// window.addEventListener("resize", () => [canvas.width, canvas.height] = [window.innerWidth, window.innerHeight], false);
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const button = document.getElementById('button');
+const greetings = document.getElementById('greetings');
+const audioPlay = document.getElementById('speakerIcon');
+const instructions = document.getElementById('Instructions');
+
+document.body.appendChild(canvas);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+window.addEventListener("resize", () => [canvas.width, canvas.height] = [window.innerWidth, window.innerHeight], false);
 
 //DHARRWEEN VILLASANA
 // class Firework {
