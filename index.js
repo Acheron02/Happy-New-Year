@@ -37,23 +37,22 @@
 //     }
 // }
 
-// MARK CLEIN TORIANO
-// class Particle {
-//     constructor(x, y, r, g, b) {
-//         [this.x, this.y, this.sx, this.sy, this.r, this.g, this.b] = [x, y, Math.random() * 3 - 1.5, Math.random() * 3 - 1.5, r, g, b];
-//         this.size = Math.random() * 2 + 0.5;
-//         this.life = 100;
-//     }
-//     update() {
-//         [this.x, this.y, this.life] = [this.x + this.sx, this.y + this.sy, this.life - 1];
-//     }
-//     draw() {
-//         ctx.fillStyle = `rgba(${this.r}, ${this.g}, ${this.b}, ${this.life / 100})`;
-//         ctx.beginPath();
-//         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-//         ctx.fill();
-//     }
-// }
+class Particle {
+    constructor(x, y, r, g, b) {
+        [this.x, this.y, this.sx, this.sy, this.r, this.g, this.b] = [x, y, Math.random() * 3 - 1.5, Math.random() * 3 - 1.5, r, g, b];
+        this.size = Math.random() * 2 + 0.5;
+        this.life = 100;
+    }
+    update() {
+        [this.x, this.y, this.life] = [this.x + this.sx, this.y + this.sy, this.life - 1];
+    }
+    draw() {
+        ctx.fillStyle = `rgba(${this.r}, ${this.g}, ${this.b}, ${this.life / 100})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
 
 // CIRILO IGNACIO GERONIO
 // const fireworks = [new Firework()];
